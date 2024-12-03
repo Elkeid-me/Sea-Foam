@@ -1,0 +1,16 @@
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeaturesDict;
+}
+
+surfaces ("sail4.obj");
+
+includedAngle       150;
+
+subsetFeatures
+{
+    nonManifoldEdges       no;
+    openEdges       yes;
+}

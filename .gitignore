@@ -1,0 +1,6 @@
+.vscode/
+log.*
+[0-9]*/
+!0/
+processor[0-9]/
+constant/polyMesh

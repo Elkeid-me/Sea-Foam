@@ -1,0 +1,30 @@
+// kinematic pressure
+FoamFile
+{
+    format ascii;
+    class  volScalarField;
+    object p;
+}
+
+dimensions [0 2 -2 0 0 0 0];
+
+internalField uniform 0;
+
+boundaryField
+{
+    freestream
+    {
+        type            freestreamPressure;
+        freestreamValue $internalField;
+    }
+
+    "aircraft.*"
+    {
+        type zeroGradient;
+    }
+
+    "proc.*"
+    {
+        type processor;
+    }
+}

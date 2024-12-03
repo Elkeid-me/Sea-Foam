@@ -1,0 +1,32 @@
+FoamFile
+{
+    format ascii;
+    class  volScalarField;
+    object k;
+}
+
+dimensions [0 2 -2 0 0 0 0];
+
+internalField uniform 0.03375;
+
+boundaryField
+{
+    freestream
+    {
+        type       inletOutlet;
+        inletValue $internalField;
+        value      $internalField;
+    }
+
+    "aircraft.*"
+    {
+        type  kqRWallFunction;
+        value $internalField;
+    }
+
+    "proc.*"
+    {
+        type processor;
+    }
+}
+

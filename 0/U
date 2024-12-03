@@ -1,0 +1,30 @@
+// velocity
+FoamFile
+{
+    format ascii;
+    class  volVectorField;
+    object U;
+}
+
+dimensions [0 1 -1 0 0 0 0];
+
+internalField uniform (3 0 0);
+
+boundaryField
+{
+    freestream
+    {
+        type            freestreamVelocity;
+        freestreamValue $internalField;
+    }
+
+    "aircraft.*"
+    {
+        type noSlip;
+    }
+
+    "proc.*"
+    {
+        type processor;
+    }
+}
