@@ -12,9 +12,9 @@ solver      incompressibleFluid
 startFrom startTime;
 startTime 0;
 stopAt    endTime;
-endTime   5;
+endTime   0.5;
 
-deltaT 0.01
+deltaT 0.005
 
 writeFormat      binary;
 writePrecision   6;

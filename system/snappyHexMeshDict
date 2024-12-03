@@ -16,7 +16,7 @@ geometry
     aircraft
     {
         type triSurfaceMesh;
-        file "Sail_5.obj";
+        file "Sky_Walker_3_Wing_Up.obj";
     }
 
     refinementBox
@@ -61,11 +61,6 @@ snapControls
     tolerance    4.0;
     nSolveIter   30;
     nRelaxIter   5;
-
-        // nFeatureSnapIter       10;
-        // implicitFeatureSnap    false;
-        // explicitFeatureSnap    true;
-        // multiRegionFeatureSnap false;
 }
 
 addLayersControls
